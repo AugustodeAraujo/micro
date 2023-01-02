@@ -1,0 +1,58 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "pm2 start",
+    "swagger": "node src/swagger.js",
+    "transpile": "babel ./src --out-dir dist",
+    "clean": "rimraf dist",
+    "build": "npm-run-all clean transpile"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "aws-sdk": "^2.1101.0",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.0",
+    "dotenv": "^15.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "luxon": "^2.4.0",
+    "mongoose": "^6.1.10",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
+    "multer-s3-transform": "^2.10.3",
+    "multer-sharp-s3": "^0.2.5",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "node-cache": "^5.1.2",
+    "nodemon": "^2.0.12",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sequelize": "^6.6.5",
+    "sharp": "^0.31.1",
+    "stripe": "^8.202.0",
+    "swagger-autogen": "^2.18.8",
+    "swagger-ui-express": "^4.1.4",
+    "uuidv4": "^6.2.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "sucrase": "^3.20.0"
+  }
+}
